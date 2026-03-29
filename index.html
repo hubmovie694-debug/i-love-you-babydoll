@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For You Neha ❤️</title>
+
+<style>
+
+body{
+text-align:center;
+font-family:Arial;
+background:linear-gradient(#ff758c,#ff7eb3);
+color:white;
+overflow:hidden;
+}
+
+img{
+width:250px;
+border-radius:20px;
+margin:10px;
+box-shadow:0 0 20px white;
+}
+
+button{
+padding:12px 20px;
+font-size:18px;
+margin:10px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+background:white;
+color:#ff4d6d;
+font-weight:bold;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+#no{
+position:absolute;
+}
+
+.heart{
+position:fixed;
+color:red;
+font-size:20px;
+animation:fall 6s linear infinite;
+}
+
+@keyframes fall{
+0%{top:-10%;}
+100%{top:110%;}
+}
+
+.page{
+display:none;
+}
+
+</style>
+
+<script>
+
+function show(id){
+document.querySelectorAll(".page").forEach(p=>p.style.display="none");
+document.getElementById(id).style.display="block";
+}
+
+function move(){
+var x=Math.random()*window.innerWidth;
+var y=Math.random()*window.innerHeight;
+
+document.getElementById("no").style.left=x+"px";
+document.getElementById("no").style.top=y+"px";
+}
+
+function hearts(){
+var heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"%";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000)
+}
+
+setInterval(hearts,300);
+
+</script>
+
+</head>
+
+<body onload="show('page1')">
+
+<div id="page1" class="page">
+
+<h1>Sorry Neha ❤️</h1>
+
+<img src="yourphoto.jpg">
+
+<p>
+Neha please mujhe maaf kar do...  
+Main maanta hoon ki main galti karta hoon  
+Par dil se tumse bahut pyaar karta hoon  
+
+Aaj main tumhara call nahi utha paya  
+Kyuki main dawa lekar so gaya tha  
+
+Please mujhe maaf kar do  
+Tum meri jaan ho Neha ❤️  
+
+- Aakash
+</p>
+
+<button onclick="show('page2')">Next</button>
+
+</div>
+
+
+<div id="page2" class="page">
+
+<h1>Neha Mujhe Maaf Karogi?</h1>
+
+<button onclick="show('page3')">Haan Maaf Kiya ❤️</button>
+
+<button id="no" onmouseover="move()">Nahi Karungi</button>
+
+</div>
+
+
+<div id="page3" class="page">
+
+<h1>I Love You Neha ❤️</h1>
+
+<img src="both.jpg">
+
+<p>
+Neha tum meri zindagi ho  
+Tum meri khushi ho  
+Tumhare alawa koi nahi ❤️  
+
+- Aakash
+</p>
+
+<button onclick="show('page4')">I Love You ❤️</button>
+
+</div>
+
+
+<div id="page4" class="page">
+
+<h1>Sirf Tumhare Liye ❤️</h1>
+
+<p>
+Tum meri jaan ho  
+Tum meri duniya ho  
+Main tumse bahut pyaar karta hoon ❤️
+</p>
+
+<button onclick="show('page5')">Next ❤️</button>
+
+</div>
+
+
+<div id="page5" class="page">
+
+<h1>Neha ❤️</h1>
+
+<p>
+Teri hasi meri jaan hai  
+Tu meri pehchan hai  
+Tu meri zindagi hai ❤️
+</p>
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+
+<button onclick="show('page6')">Next ❤️</button>
+
+</div>
+
+
+<div id="page6" class="page">
+
+<h1>Neha ❤️</h1>
+
+<h2>Kya Tum Hamesha Mere Saath Rahogi?</h2>
+
+<button onclick="show('page7')">Haan ❤️</button>
+<button id="no" onmouseover="move()">Nahi</button>
+
+</div>
+
+
+<div id="page7" class="page">
+
+<h1>I Love You Forever Neha ❤️</h1>
+
+<h2>Always Yours Aakash ❤️</h2>
+
+<h3>Forever Together 💍</h3>
+
+</div>
+
+</body>
+</html>
